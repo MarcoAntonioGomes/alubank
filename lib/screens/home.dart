@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
     return const Scaffold(body: Column(
       children: <Widget>[
         Header(),
-        BoxCard(boxContent: boxContent)
+        BoxCard(boxContent: Text('Ola Mundo'))
       ],
     ),);
   }
