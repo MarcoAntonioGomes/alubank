@@ -1,5 +1,6 @@
 import 'package:alubank/components/box_card.dart';
 import 'package:alubank/components/sections/header.dart';
+import 'package:alubank/components/sections/recentactivity.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -10,7 +11,7 @@ class Home extends StatelessWidget {
     return const Scaffold(body: Column(
       children: <Widget>[
         Header(),
-        BoxCard(boxContent: Text('Ola Mundo'))
+        RecentActivity()
       ],
     ),);
   }
