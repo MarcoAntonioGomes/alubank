@@ -1,3 +1,4 @@
+import 'package:alubank/generated/l10n/app_localizations.dart';
 import 'package:alubank/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -30,7 +31,7 @@ class Header extends StatelessWidget {
 
                     ])),
                 Text(
-                  'Balanço dísponível',
+                  AppLocalizations.of(context)!.balance_disponible,
                 )
               ],
             ),

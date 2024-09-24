@@ -1,4 +1,5 @@
 import 'package:alubank/components/box_card.dart';
+import 'package:alubank/generated/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 class AccountActions extends StatelessWidget {
@@ -11,15 +12,15 @@ class AccountActions extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 16.0),
-          child: Text('Ações da conta', style: Theme.of(context).textTheme.titleMedium,),
+          child: Text(AppLocalizations.of(context)!.account_actions, style: Theme.of(context).textTheme.titleMedium,),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            InkWell(onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.account_balance_wallet), text: 'Depositar'))),
-            InkWell(onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.cached), text: 'Transferir'))),
+            InkWell(onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.account_balance_wallet), text: AppLocalizations.of(context)!.deposit))),
+            InkWell(onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.cached), text: AppLocalizations.of(context)!.transfer))),
             InkWell(
-                onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.center_focus_strong), text: 'Ler')))
+                onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.center_focus_strong), text: AppLocalizations.of(context)!.read)))
           ],
         )
       ],

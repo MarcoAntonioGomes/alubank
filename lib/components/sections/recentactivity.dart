@@ -1,6 +1,7 @@
 import 'package:alubank/components/box_card.dart';
 import 'package:alubank/components/color_dot.dart';
 import 'package:alubank/components/content_division.dart';
+import 'package:alubank/generated/l10n/app_localizations.dart';
 import 'package:alubank/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,7 @@ class _RecentActivity extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Saída'),
+                    Text(AppLocalizations.of(context)!.money_out),
                     Text('\$9907.97', style: Theme.of(context).textTheme.bodyLarge,)
                   ],
                 ),
@@ -51,7 +52,7 @@ class _RecentActivity extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Entrada'),
+                      Text(AppLocalizations.of(context)!.money_in),
                       Text('\$9907.97', style: Theme.of(context).textTheme.bodyLarge,)
                     ],
                   )
@@ -62,7 +63,7 @@ class _RecentActivity extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.only(top: 16.0, bottom: 8.0),
-          child: Text('Limite de gastos: \$432.90'),
+          child: Text(AppLocalizations.of(context)!.expenses_limits+': \$432.90'),
         ),
         Container(
           clipBehavior: Clip.hardEdge,
@@ -80,7 +81,7 @@ class _RecentActivity extends StatelessWidget {
           child: ContentDivision(),
         ),
         Text('Esse mês você gastou \$1500.00 com jogos. Tente abaixar esse custo!'),
-        TextButton(onPressed: (){}, child: Text('Diga-me como!',  style: TextStyle(fontSize: 16, color: Theme.of(context).primaryColor),)),
+        TextButton(onPressed: (){}, child: Text(AppLocalizations.of(context)!.tell_me_how,  style: TextStyle(fontSize: 16, color: Theme.of(context).primaryColor),)),
       ],
     );
   }

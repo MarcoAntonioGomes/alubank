@@ -1,0 +1,15 @@
+{
+"balance_disponible": "Disponible Balance",
+  "money_out": "Out",
+  "money_in": "In",
+  "expenses_limits": "Expense limits",
+  "tell_me_how": "Tell me how!",
+  "account_actions": "Account Actions",
+  "deposit": "Depositar",
+  "transfer": "Transfer",
+  "read": "Read",
+  "account_points": "Account Points",
+  "total_points": "Total Points",
+  "goal": "Goal",
+  "free_delivery":"Free delivery"
+}

@@ -3,6 +3,7 @@
 import 'package:alubank/components/box_card.dart';
 import 'package:alubank/components/color_dot.dart';
 import 'package:alubank/components/content_division.dart';
+import 'package:alubank/generated/l10n/app_localizations.dart';
 import 'package:alubank/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,7 @@ class AccountPoints extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 16.0),
             child: Text(
-              'Pontos da conta',
+              AppLocalizations.of(context)!.account_points,
               style: Theme.of(context).textTheme.titleMedium,
             ),
           ),
@@ -28,7 +29,7 @@ class AccountPoints extends StatelessWidget {
               boxContent: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Pontos totais'),
+                  Text(AppLocalizations.of(context)!.total_points),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0),
                     child: Text(
@@ -40,12 +41,12 @@ class AccountPoints extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0, top: 8.0),
                     child: Text(
-                      'Objetivo:',
+                      AppLocalizations.of(context)!.goal,
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
-                  _AccountPointsContent(dot: ThemeColors.recentActivity['red'], text: 'Entrega grátis: 1500'),
-                  _AccountPointsContent(dot: ThemeColors.recentActivity['dark-purple'], text: 'Entrega grátis: 1500'),
+                  _AccountPointsContent(dot: ThemeColors.recentActivity['red'], text: '${AppLocalizations.of(context)!.free_delivery}: 1500'),
+                  _AccountPointsContent(dot: ThemeColors.recentActivity['dark-purple'], text: '${AppLocalizations.of(context)!.free_delivery}: 1500'),
                 ],
               ))
         ],
