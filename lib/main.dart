@@ -45,21 +45,6 @@ class Alubank extends StatelessWidget {
 
     }else{
       return  MaterialApp(
-        locale: _locale ,
-        localizationsDelegates: AppLocalizations.localizationsDelegates,
-        supportedLocales: AppLocalizations.supportedLocales,
-        localeResolutionCallback: (locale, supportedLocales) {
-          if (_locale != null) {
-            return _locale;
-          }
-          for (var supportedLocale in supportedLocales) {
-            if (supportedLocale.languageCode == locale?.languageCode &&
-                supportedLocale.countryCode == locale?.countryCode) {
-              return supportedLocale;
-            }
-          }
-          return supportedLocales.first;
-        },
         title: 'Alubank',
         theme: MyTheme,
         home: LocalizationLoader(locale: LocaleResolver().resolve(_locale!.languageCode)),

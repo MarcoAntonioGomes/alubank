@@ -23,7 +23,7 @@ class AccountPoints extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 16.0),
             child: Text(
-              AppLocalizations.of(context)!.account_points,
+              i18n().translate('account_points', AppConfig.internalizationModeEager, context),
               style: Theme.of(context).textTheme.titleMedium,
             ),
           ),

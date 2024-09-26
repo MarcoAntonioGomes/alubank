@@ -40,11 +40,13 @@ class i18n {
  }
 
   String translate(String key, bool isEager, BuildContext context) {
-      buildSentences(context);
+
 
     if(isEager){
+      buildSentences(context);
       return sentences[key] ?? key;
     }
+
     return _localizedStrings[key] ?? key; // Retorna a chave caso a tradução não exista
   }
 }
