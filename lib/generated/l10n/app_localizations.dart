@@ -134,7 +134,7 @@ abstract class AppLocalizations {
   /// No description provided for @deposit.
   ///
   /// In en, this message translates to:
-  /// **'Depositar'**
+  /// **'Deposit'**
   String get deposit;
 
   /// No description provided for @transfer.

@@ -1,4 +1,6 @@
 import 'package:alubank/components/box_card.dart';
+import 'package:alubank/components/config/app_config.dart';
+import 'package:alubank/components/localization/localization_service.dart';
 import 'package:alubank/generated/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
@@ -12,15 +14,15 @@ class AccountActions extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: 16.0),
-          child: Text(AppLocalizations.of(context)!.account_actions, style: Theme.of(context).textTheme.titleMedium,),
+          child: Text(i18n().translate('account_actions', AppConfig.internalizationModeEager, context), style: Theme.of(context).textTheme.titleMedium,),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            InkWell(onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.account_balance_wallet), text: AppLocalizations.of(context)!.deposit))),
-            InkWell(onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.cached), text: AppLocalizations.of(context)!.transfer))),
+            InkWell(onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.account_balance_wallet), text: i18n().translate('deposit', AppConfig.internalizationModeEager, context)))),
+            InkWell(onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.cached), text: i18n().translate('transfer',AppConfig.internalizationModeEager, context)))),
             InkWell(
-                onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.center_focus_strong), text: AppLocalizations.of(context)!.read)))
+                onTap: (){},child: BoxCard(boxContent: _AccountActionsContent(icon: Icon(Icons.center_focus_strong), text: i18n().translate('read', AppConfig.internalizationModeEager, context))))
           ],
         )
       ],

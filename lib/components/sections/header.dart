@@ -1,3 +1,5 @@
+import 'package:alubank/components/config/app_config.dart';
+import 'package:alubank/components/localization/localization_service.dart';
 import 'package:alubank/generated/l10n/app_localizations.dart';
 import 'package:alubank/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +33,7 @@ class Header extends StatelessWidget {
 
                     ])),
                 Text(
-                  AppLocalizations.of(context)!.balance_disponible,
+                    i18n().translate('balance_disponible',AppConfig.internalizationModeEager, context)
                 )
               ],
             ),

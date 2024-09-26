@@ -25,7 +25,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get account_actions => 'Account Actions';
 
   @override
-  String get deposit => 'Depositar';
+  String get deposit => 'Deposit';
 
   @override
   String get transfer => 'Transfer';

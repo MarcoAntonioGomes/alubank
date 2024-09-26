@@ -2,7 +2,9 @@
 
 import 'package:alubank/components/box_card.dart';
 import 'package:alubank/components/color_dot.dart';
+import 'package:alubank/components/config/app_config.dart';
 import 'package:alubank/components/content_division.dart';
+import 'package:alubank/components/localization/localization_service.dart';
 import 'package:alubank/generated/l10n/app_localizations.dart';
 import 'package:alubank/themes/theme_colors.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +31,7 @@ class AccountPoints extends StatelessWidget {
               boxContent: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(AppLocalizations.of(context)!.total_points),
+                  Text(i18n().translate('total_points', AppConfig.internalizationModeEager, context)),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0),
                     child: Text(
@@ -41,12 +43,12 @@ class AccountPoints extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 8.0, top: 8.0),
                     child: Text(
-                      AppLocalizations.of(context)!.goal,
+                      i18n().translate('goal', AppConfig.internalizationModeEager, context),
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
-                  _AccountPointsContent(dot: ThemeColors.recentActivity['red'], text: '${AppLocalizations.of(context)!.free_delivery}: 1500'),
-                  _AccountPointsContent(dot: ThemeColors.recentActivity['dark-purple'], text: '${AppLocalizations.of(context)!.free_delivery}: 1500'),
+                  _AccountPointsContent(dot: ThemeColors.recentActivity['red'], text: '${i18n().translate('free_delivery',AppConfig.internalizationModeEager, context)}:1500'),
+                  _AccountPointsContent(dot: ThemeColors.recentActivity['dark-purple'], text: '${i18n().translate('free_delivery', AppConfig.internalizationModeEager, context)}: 1500'),
                 ],
               ))
         ],
